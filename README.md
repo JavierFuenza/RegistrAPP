@@ -25,6 +25,10 @@ Casos de uso:
 Funcionalidades requeridas para esta entrega:
 + La App debe permitir ingresar las credenciales de acceso del alumno.
 
+Division de trabajo:
++ Ingreso de usuario: Fran
++ Recuperar contraseña: Serchi
+
 # Recursos de Diseño
 + Sintaxis markdown (para este documento)
   + https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
