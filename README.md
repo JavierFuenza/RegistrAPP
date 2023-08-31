@@ -25,5 +25,5 @@ Casos de uso:
 Funcionalidades requeridas para esta entrega:
 + La App debe permitir ingresar las credenciales de acceso del alumno.
 
-//Link Canvas//
-https://www.canva.com/design/DAFtIpb5pcI/8sFADYrkv1V2_v9B4rtKLQ/edit?utm_content=DAFtIpb5pcI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+# Link Canvas
++ https://www.canva.com/design/DAFtIpb5pcI/8sFADYrkv1V2_v9B4rtKLQ/edit?utm_content=DAFtIpb5pcI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
