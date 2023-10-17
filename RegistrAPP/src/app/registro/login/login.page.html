@@ -1,23 +1,22 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic 4 Form
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content class="auth-form">
-  <ion-grid>
-    <ion-row>
-      <ion-col align-self-center>
-        <ion-button [routerLink]="['/registration']" expand="block" color="primary">Register</ion-button>
-
-        <span class="divider line one-line">or</span>
-
-        <span class="already">Ya estas registrado?</span>
-
-        <ion-button [routerLink]="['/login']" expand="block" color="danger">Sign In</ion-button>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div>
+  <h1>RegistrAPP</h1>
+  </div>
+  
+  <ion-list>
+    <ion-item>
+      <ion-input label="Correo" labelPlacement="floating" type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Contraseña" labelPlacement="floating" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div class="centrar">
+    <ion-button fill="clear" size="large" color="dark" (click)="next()">Ingresar</ion-button>
+  </div>
+  <br>
+  <div class="centrar">
+    <ion-toggle class="centrar">Recuerdame</ion-toggle>
+  </div>
+  
 </ion-content>
