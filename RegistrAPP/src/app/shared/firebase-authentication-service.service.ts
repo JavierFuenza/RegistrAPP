@@ -4,6 +4,7 @@ import { Usuario } from '../../../shared/Usuario';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import {AngularFirestore,AngularFirestoreDocument} from '@angular/fire/compat/firestore';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 @Injectable({
   providedIn: 'root'
@@ -111,4 +112,19 @@ export class FirebaseAuthenticationServiceService {
     const user = JSON.parse(localStorage.getItem('user') || '{}');
     return user.emailVerified !== false ? true : false;
   }
+
+  //Obtener nombre de usuario
+  nomUsuario(){
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        
+        return user.displayName;
+      } else {
+        return "null"
+      }
+    });
+    
+  }
 }
+
