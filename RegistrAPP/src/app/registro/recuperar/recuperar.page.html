@@ -1,17 +1,17 @@
 
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-button size="small" fill="clear" color="dark" (click)="Volver()">
+      <ion-icon size="small" name="chevron-back-outline"></ion-icon>
+    </ion-button>
+    
     <ion-title>
       RegistrAPP
     </ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true" >
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">RegistrAPP</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
   <h1>¿Olvidaste tu</h1>
   <h1> contraseña?</h1>
   <br>
@@ -20,8 +20,8 @@
   </div>
   <p class="centrar">Ingresa tu correo electronico.</p>
   <br>
-  <ion-input label="Correo electronico" labelPlacement="floating" placeholder="Ingrese aqui su coreo"></ion-input>
-  <ion-button expand="full" color="medium">Enviar</ion-button>  
+  <ion-input label="Correo electronico" labelPlacement="floating" placeholder="Ingrese aqui su coreo" #email required="true"></ion-input>
+  <ion-button type="submit" expand="full" color="medium" (click)="authService.PasswordRecover(email.value)">Enviar</ion-button>  
 </ion-content>
 <!--<ion-footer>
 </ion-footer>-->
