@@ -7,6 +7,10 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./registro/login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path:'login', redirectTo: '', pathMatch: 'full'
+
+  },
   /*
   {
     path: 'register',
