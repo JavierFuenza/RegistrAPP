@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseAuthenticationServiceService } from '../shared/firebase-authentication-service.service';
 
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
@@ -9,8 +10,9 @@ import { FirebaseAuthenticationServiceService } from '../shared/firebase-authent
 export class InicioPage implements OnInit {
 
   constructor( public authService: FirebaseAuthenticationServiceService) { }
-
-  ngOnInit() {
-  }
+  ngOnInit(){
+    console.log(this.authService.verStorage())
+  };
+  
 
 }

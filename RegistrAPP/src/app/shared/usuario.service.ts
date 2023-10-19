@@ -13,7 +13,7 @@ export class UsuarioService {
   constructor(private db: AngularFireDatabase) { }
 
   //Create
-  
+  /*
   crearUsuario(user: Usuario) {
     return this.usuarioListRef.push({
       email: user.email,
@@ -49,4 +49,5 @@ export class UsuarioService {
     this.usuarioRef = this.db.object('/usuario/' + id);
     this.usuarioRef.remove();
   }
+  */
 }

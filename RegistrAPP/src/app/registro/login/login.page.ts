@@ -15,10 +15,6 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {}
   
-  RecuerdameChange(event: any) {
-    const value = event.detail.checked; // Obtén el estado del toggle
-    this.authService.setRecuerdame(value); // Actualiza el valor en el servicio
-  }
 
   logIn(email: any, password: any) {
     this.authService

@@ -11,15 +11,15 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <div class="texto">
+        <div class="centrar">
           <h1>Bienvenido</h1>
-          <h3>[Nombre alumno]</h3>
+          <h3>{{authService.nomUsuario()}}</h3>
         </div>
-  </ion-col>
-  <ion-col>
-    <img src="../../../assets/default-avatar.png" alt="avatar">
-  </ion-col>
-  </ion-row>
+      </ion-col>
+      <ion-col>
+        <img src="{{authService.imgUsuario()}}" alt="avatar">
+      </ion-col>
+    </ion-row>
   </ion-grid>
   <div class="camara">
     <ion-button color="light">
