@@ -11,7 +11,7 @@ export class InicioPage implements OnInit {
 
   constructor( public authService: FirebaseAuthenticationServiceService) { }
   ngOnInit(){
-    console.log(this.authService.verStorage())
+    //console.log(this.authService.verStorage())
   };
   
 

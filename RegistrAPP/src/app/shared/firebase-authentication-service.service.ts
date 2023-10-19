@@ -10,6 +10,7 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat
 })
 export class FirebaseAuthenticationServiceService {
   userData: any;
+  authGuard : boolean = false;
 
   constructor(
     public afStore: AngularFirestore,
