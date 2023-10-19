@@ -3,17 +3,15 @@ import * as auth from 'firebase/auth';
 import { Usuario } from '../../../shared/Usuario';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import {AngularFirestore,AngularFirestoreDocument} from '@angular/fire/compat/firestore';
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseAuthenticationServiceService {
   userData: any;
-  recuerdame : boolean = false;
 
-  constructor( 
+  constructor(
     public afStore: AngularFirestore,
     public ngFireAuth: AngularFireAuth,
     public router: Router,
@@ -22,20 +20,15 @@ export class FirebaseAuthenticationServiceService {
     this.ngFireAuth.authState.subscribe((user) => {
       if (user) {
         this.userData = user;
-        if (this.recuerdame){
-          localStorage.setItem('user', JSON.stringify(this.userData));
-          JSON.parse(localStorage.getItem('user') || '{}');
-        }
+        localStorage.setItem('user', JSON.stringify(this.userData));
+        JSON.parse(localStorage.getItem('user') || '{}');
       } else {
         localStorage.setItem('user', null || '{}');
         JSON.parse(localStorage.getItem('user') || '{}');
       }
     });
   }
-  //Cambiar Valor de recuerdame
-  setRecuerdame(value: boolean) {
-    this.recuerdame = value;
-  }
+
   // Login con email/password
   SignIn(email: any, password: any) {
     return this.ngFireAuth.signInWithEmailAndPassword(email, password);
@@ -93,7 +86,7 @@ export class FirebaseAuthenticationServiceService {
       email: user.email,
       displayName: user.displayName,
       photoURL: user.photoURL,
-      emailVerified: user.emailVerified,
+      emailVerified: user.emailVerified
     };
     return userRef.set(userData, {
       merge: true,
@@ -114,17 +107,21 @@ export class FirebaseAuthenticationServiceService {
   }
 
   //Obtener nombre de usuario
-  nomUsuario(){
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        
-        return user.displayName;
-      } else {
-        return "null"
-      }
-    });
-    
+  nomUsuario() {
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
+    return user.displayName
+
+  }
+
+  //obtener imagen
+  imgUsuario() {
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
+    return user.photoURL
+
+  }
+
+  verStorage() {
+    return (JSON.parse(localStorage.getItem('user') || '{}'))
   }
 }
 
