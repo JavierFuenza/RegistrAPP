@@ -11,7 +11,7 @@
 .line {
     align-items: center;
     margin: 1em -1em;
-    color: #cccccc;
+    color: #df090900;
 
     &:before,
     &:after {
@@ -23,7 +23,7 @@
 .one-line {
     &:before,
     &:after {
-       background: #cccccc;
+       background: #f1080800;
     }
 }
 
@@ -31,10 +31,22 @@
 .auth-form ion-row {
     height: 100%;
     justify-content: center;
+    
+    
 }
 
 .already {
     display: block;
     text-align: center;
     padding-bottom: 10px;
+}
+
+.centrar{
+    text-align: center;
+}
+.body{
+    background-image: url('./ImagenBackground.jpg'); /* Reemplaza 'ruta-de-la-imagen.jpg' con la URL o la ruta de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el elemento */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
 }

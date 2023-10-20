@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <ion-header>
   <ion-toolbar>
     <ion-title>
@@ -5,3 +6,37 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
+=======
+<body class="body">
+  <ion-content class="auth-form">
+  <div>
+    <h1>RegistrAPP</h1>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-input label="Correo" labelPlacement="floating" type="email" required #email></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Contraseña" labelPlacement="floating" type="password" required #password></ion-input>
+    </ion-item>
+  </ion-list>
+  <div class="centrar">
+    <ion-button type="submit" fill="clear" size="large" color="dark"
+      (click)="logIn(email, password)">Ingresar</ion-button>
+  </div>
+  <br>
+  <ion-button type="submit" color="medium" (click)="authService.GoogleAuth()" expand="block" fill="clear">
+    <ion-icon name="logo-google"></ion-icon>
+    &nbsp; Iniciar sesion con Google
+  </ion-button>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="centrar">
+    <ion-button color="medium" fill="clear" (click)="Olvido()">¿Olvidaste tu contraseña?</ion-button>
+  </div>
+  </ion-content>
+</body>
+>>>>>>> Stashed changes
