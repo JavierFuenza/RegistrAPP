@@ -22,8 +22,9 @@
     </ion-row>
   </ion-grid>
   <div class="camara">
-    <ion-button color="light">
-      <ion-icon slot="icon-only" name="camera"></ion-icon>
+    <ion-button color="light" (click)="scan()" [disabled]="!isSupported">
+      <ion-icon slot="icon-only" name="camera" ></ion-icon>
     </ion-button>
+
   </div>
 </ion-content>

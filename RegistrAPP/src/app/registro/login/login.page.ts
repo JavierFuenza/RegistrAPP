@@ -3,6 +3,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FirebaseAuthenticationServiceService } from 'src/app/shared/firebase-authentication-service.service';
+import { GoogleAuthService } from 'src/app/shared/google-auth.service';
+
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,9 @@ import { FirebaseAuthenticationServiceService } from 'src/app/shared/firebase-au
 })
 export class LoginPage implements OnInit {
   constructor(public router: Router, 
-  public authService: FirebaseAuthenticationServiceService){}
+  public authService: FirebaseAuthenticationServiceService,
+  public googleAuth: GoogleAuthService){}
+  
 
   ngOnInit() {}
   
@@ -34,6 +38,9 @@ export class LoginPage implements OnInit {
   Olvido(){
     this.router.navigate(['recuperar'])
   }
+
+  
+  
 }
 
 
