@@ -16,12 +16,9 @@
       (click)="logIn(email, password)">Ingresar</ion-button>
   </div>
   <br>
-  <ion-button type="submit" color="medium"  (click)="googleAuth.googleSignup()" expand="block" fill="clear">
+  <ion-button type="submit" color="medium"  (click)="authService.GoogleAuth()" expand="block" fill="clear">
     <ion-icon name="logo-google"></ion-icon>
     &nbsp; Iniciar sesion con Google
-  </ion-button>
-  <ion-button [routerLink]="['/inicio']">
-    <p>inicio</p>
   </ion-button>
   <br>
   <br>
